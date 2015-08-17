@@ -28,10 +28,6 @@ mongoose.connection.on('connected', function() {
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, 'public')));
 
-  app.get("/", function(req, res) {
-    res.redirect("https://docs.google.com/document/d/1kZ64Rqm0Nx8EMLoMjjUD789G_yTYCK8H6yWolXYJXlI/pub?embedded=true");
-  });
-
   app.get('/health/basic.json', function(req, res) {
     res.send({
       success: true
