@@ -1,0 +1,27 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    asciiart (0.0.9)
+      rainbow (= 2.0.0)
+      rmagick (= 2.13.4)
+    byebug (6.0.2)
+    colored (1.2)
+    curses (1.0.1)
+    mime-types (2.4.3)
+    rainbow (2.0.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rmagick (2.13.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  asciiart
+  byebug
+  colored
+  curses
+  rest-client
+
+BUNDLED WITH
+   1.10.5

@@ -1,0 +1,9 @@
+source 'http://rubygems.org'
+
+ruby '2.2.2'
+
+gem 'rest-client'
+gem 'colored'
+gem 'byebug'
+gem 'curses'
+gem 'asciiart'
