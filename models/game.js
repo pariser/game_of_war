@@ -122,19 +122,19 @@ if (mongoose.models.Game) {
 
     if (this.state === BOTH_PLAYERS_SHUFFLE_REQUIRED) {
       if (!suppliedPlayerOneDeck) {
-        return this.failedGame("Didn't supply user 1 deck", cb);
+        return this.failedGame("Didn't supply player one deck", cb);
       }
 
       if (!suppliedPlayerTwoDeck) {
-        return this.failedGame("Didn't supply user 2 deck", cb);
+        return this.failedGame("Didn't supply player two deck", cb);
       }
 
       if (this.playerCollectionInvalid('one', data.one, cb)) {
-        return this.failedGame("Invalid collection for user 1", cb);
+        return this.failedGame("Invalid collection for player one", cb);
       }
 
       if (this.playerCollectionInvalid('two', data.two, cb)) {
-        return this.failedGame("Invalid collection for user 2", cb);
+        return this.failedGame("Invalid collection for player two", cb);
       }
 
       var shuffledPlayerOneDeck = this.playerOneCollection.slice(0);
@@ -156,11 +156,11 @@ if (mongoose.models.Game) {
       });
     } else if (this.state === PLAYER_ONE_SHUFFLE_REQUIRED) {
       if (!suppliedPlayerOneDeck) {
-        return this.failedGame("Didn't supply user 1 deck", cb);
+        return this.failedGame("Didn't supply player one deck", cb);
       }
 
       if (this.playerCollectionInvalid('one', data.one, cb)) {
-        return this.failedGame("Invalid collection for user 1", cb);
+        return this.failedGame("Invalid collection for player one", cb);
       }
 
       var shuffledPlayerOneDeck = this.playerOneCollection.slice(0);
@@ -176,11 +176,11 @@ if (mongoose.models.Game) {
       });
     } else if (this.state === PLAYER_TWO_SHUFFLE_REQUIRED) {
       if (!suppliedPlayerTwoDeck) {
-        return this.failedGame("Didn't supply user 2 deck", cb);
+        return this.failedGame("Didn't supply player two deck", cb);
       }
 
       if (this.playerCollectionInvalid('two', data.two, cb)) {
-        return this.failedGame("Invalid collection for user 2", cb);
+        return this.failedGame("Invalid collection for player two", cb);
       }
 
       var shuffledPlayerTwoDeck = this.playerTwoCollection.slice(0);
@@ -303,11 +303,11 @@ if (mongoose.models.Game) {
     var playerTwoValue = Card.value(playerTwoCard);
 
     if (playerOneValue > playerTwoValue) {
-      this.logGameEvent('player 1 takes cards: ' + playerOneCard + ', ' + playerTwoCard);
+      this.logGameEvent('player one takes cards: ' + playerOneCard + ', ' + playerTwoCard);
       this.playerOneCollection = this.playerOneCollection.concat(this.playCollection);
       this.playCollection = [];
     } else if (playerTwoValue > playerOneValue) {
-      this.logGameEvent('player 2 takes cards: ' + playerOneCard + ', ' + playerTwoCard);
+      this.logGameEvent('player two takes cards: ' + playerOneCard + ', ' + playerTwoCard);
       this.playerTwoCollection = this.playerTwoCollection.concat(this.playCollection);
       this.playCollection = [];
     } else {
@@ -445,9 +445,9 @@ if (mongoose.models.Game) {
     console.log("");
     console.log("Game " + this.id + " in state: " + this.state);
     console.log("- Center: " + Card.collectionString(this.playCollection));
-    console.log("- Player 1 deck: " + Card.collectionString(this.playerOneDeck) +
+    console.log("- Player one deck: " + Card.collectionString(this.playerOneDeck) +
                 ", collection: " + Card.collectionString(this.playerOneCollection));
-    console.log("- Player 2 deck: " + Card.collectionString(this.playerTwoDeck) +
+    console.log("- Player two deck: " + Card.collectionString(this.playerTwoDeck) +
                 ", collection: " + Card.collectionString(this.playerTwoCollection));
     console.log("");
   };
