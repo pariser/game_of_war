@@ -8,7 +8,7 @@
 * Run `$ npm install` to install dependencies.
 * Run `$ nodemon bin/www` to start the server.
 * Run `$ bin/solution.js` to play the Game of War.
-* Default behavior is to run this on port 3000 (may conflict with other servers)
+* Default behavior is to run this on port 5555
 
 Development dependencies
 

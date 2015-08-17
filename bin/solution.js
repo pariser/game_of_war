@@ -20,7 +20,7 @@ function logGame(game) {
 }
 
 function url(path) {
-  return 'http://0.0.0.0:3000/' + path.replace(/^\/?/, '');
+  return 'http://0.0.0.0:5555/' + path.replace(/^\/?/, '');
 }
 
 function jsonCallback(cb) {
