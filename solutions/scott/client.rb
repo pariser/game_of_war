@@ -62,7 +62,7 @@ class OutputFormatter
       show_game_pile_cards(@column_width * 1)
       show_player(@game.players[1], @column_width * 2)
       @window.refresh
-      sleep 0
+      sleep 0.3
     end
   end
 
