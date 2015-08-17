@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-var MONGO_SERVER = 'mongodb://localhost/game-of-war';
+var MONGO_SERVER = process.env.MONGOLAB_URI || "mongodb://localhost/game-of-war";
 
 require('./models/game');
 
