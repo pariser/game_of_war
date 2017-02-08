@@ -1,0 +1,26 @@
+{
+  "name": "game-of-war",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "solution": "node ./bin/solution.js"
+  },
+  "dependencies": {
+    "async": "^1.4.2",
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "mongoose": "^4.1.2",
+    "morgan": "~1.6.1",
+    "node-sass-middleware": "0.8.0",
+    "random-js": "git://github.com/pariser/random-js.git#a9c60d02dc9fae61878edc260127ea0be86c466b",
+    "serve-favicon": "~2.3.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "request": "^2.61.0"
+  }
+}
